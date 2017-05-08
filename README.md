@@ -55,8 +55,12 @@ https://vikingmute.gitbooks.io/webpack-for-fools/content/entries/chapter-1.html
 
 
 ### 3. React
+#### 3.1 简陋的React
 - `$ npm install babel-loader --save-dev`
 - `$ npm install babel-preset-es2015 babel-preset-react --save-dev`
 - 配置webapck.config.js
-- `$ npm install react react-dom --save`
+- `$ npm install react react-dom react-hot-loader@next  --save`
 - `import React, { Component } from 'react'; import ReactDOM from 'react-dom';`
+
+- https://webpack.js.org/guides/hmr-react/ 可以使用HOT MODULE REPLACEMENT FOR React,
+加入.babelrc文件
