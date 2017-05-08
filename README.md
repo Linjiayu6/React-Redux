@@ -64,3 +64,12 @@ https://vikingmute.gitbooks.io/webpack-for-fools/content/entries/chapter-1.html
 
 - https://webpack.js.org/guides/hmr-react/ 可以使用HOT MODULE REPLACEMENT FOR React,
 加入.babelrc文件
+
+### 4. Redux, React-Redux
+#### 4.1 Redux
+- `$ npm install redux --save`
+- 文件在src/redux里面, action, reducer, 最重要的是store的建立
+
+#### 4.2 React-Redux
+- `$ npm install react-redux --save`
+在index这个文件
