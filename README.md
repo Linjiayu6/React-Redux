@@ -38,3 +38,6 @@ https://vikingmute.gitbooks.io/webpack-for-fools/content/entries/chapter-1.html
 #### 2.3 css-loader style-loader
 - `$ npm install css-loader style-loader --save-dev`
 - webpack.config.js module配置loaders
+
+#### 2.4 支持第三方库
+- `$ npm install moment --save-dev`

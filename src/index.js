@@ -1,6 +1,8 @@
 require('./style.css');
+var moment = require('moment');
+
 var generateText = require('./generateText');
 var app  = document.createElement('div');
-app.innerHTML = '<h1>Hello World1111</h1>';
+app.innerHTML = '<h1>Time: '+ moment().format() +'</h1>';
 app.appendChild(generateText());
 document.body.appendChild(app);
