@@ -12,13 +12,14 @@ module.exports = {
   // /public 输出的文件名 合并以后的js会命名为bundle.js
   output: {
     path: PUBLIC_PATH,
-    filename: 'bundle.js'
+    filename: '[name].[hash].bundle.js'
   },
+  devtool: 'eval-source-map',
   module: {
     loaders: [
       {
         test: /\.css$/,
-        loaders: ['style-loader', 'css-loader'],
+        loaders: ['style-loader', 'css-loader?sourceMap'],
         include: ENTRY_PATH
       },
       {

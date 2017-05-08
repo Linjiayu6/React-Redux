@@ -4,7 +4,8 @@
   "description": "webpack, react, redux",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --hot --inline --content-base"
+    "start": "webpack-dev-server --progress --hot --inline --content-base",
+    "build": "webpack --progress --profile --colors --config webpack.config.js"
   },
   "keywords": [
     "webpack",

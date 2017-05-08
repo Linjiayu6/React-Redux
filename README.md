@@ -45,3 +45,10 @@ https://vikingmute.gitbooks.io/webpack-for-fools/content/entries/chapter-1.html
 #### 2.5 es6
 - `$ npm install babel-loader babel-preset-es2015 --save-dev`
 - 配置webpack.config.js loaders
+
+#### 2.6 启用source-map, 构建, output bundle.js
+- 加入devtool: 'eval-source-map' 现在的代码是合并以后的代码，不利于排错和定位，只需要在config中添加
+这样出错以后就会采用source-map的形式直接显示你出错代码的位置
+- package.json: "build": "webpack --progress --profile --colors --config webpack.config.js"
+- `$ npm run build`
+- 生成Hash名称的script来防止缓存 filename: '[name].[hash].bundle.js'
