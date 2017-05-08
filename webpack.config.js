@@ -27,14 +27,15 @@ module.exports = {
         loader: 'babel-loader',
         include: ENTRY_PATH,
         query: {
-          presets: ['es2015']
+          //添加两个presents 使用这两种presets处理js或者jsx文件
+          presets: ['es2015', 'react']
         }
       },
     ]
   },
   // 添加我们的插件 会自动生成一个html文件
   plugins: [
-    new HtmlwebpackPlugin({ title: 'webpack' })
+    new HtmlwebpackPlugin({ title: 'react' })
   ],
   devServer: {
     contentBase: "./src",//本地服务器所加载的页面所在的目录

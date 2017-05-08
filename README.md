@@ -52,3 +52,11 @@ https://vikingmute.gitbooks.io/webpack-for-fools/content/entries/chapter-1.html
 - package.json: "build": "webpack --progress --profile --colors --config webpack.config.js"
 - `$ npm run build`
 - 生成Hash名称的script来防止缓存 filename: '[name].[hash].bundle.js'
+
+
+### 3. React
+- `$ npm install babel-loader --save-dev`
+- `$ npm install babel-preset-es2015 babel-preset-react --save-dev`
+- 配置webapck.config.js
+- `$ npm install react react-dom --save`
+- `import React, { Component } from 'react'; import ReactDOM from 'react-dom';`
