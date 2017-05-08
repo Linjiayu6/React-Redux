@@ -15,6 +15,7 @@ https://fakefish.github.io/react-webpack-cookbook/
 https://vikingmute.gitbooks.io/webpack-for-fools/content/entries/chapter-1.html
 
 ### 2. Webpack
+- https://webpack.js.org/guides/
 
 配置文件主要分为三个部分
 - entry: /src/ 入口文件
@@ -33,3 +34,7 @@ https://vikingmute.gitbooks.io/webpack-for-fools/content/entries/chapter-1.html
 - 在webpack.config.js里面配置devServer
 - package.json里面配置运行的命令 "start": "webpack-dev-server --progress --hot --inline --content-base"
 - 运行`$ npm start`
+
+#### 2.3 css-loader style-loader
+- `$ npm install css-loader style-loader --save-dev`
+- webpack.config.js module配置loaders
