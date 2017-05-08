@@ -1,6 +1,7 @@
 var path = require('path');
 var HtmlwebpackPlugin = require('html-webpack-plugin');
 
+// “__dirname”是node.js中的一个全局变量，它指向当前执行脚本所在的目录
 var ROOT_PATH = path.resolve(__dirname);
 var ENTRY_PATH = path.resolve(ROOT_PATH, 'src');
 var PUBLIC_PATH = path.resolve(ROOT_PATH, 'public');
@@ -15,8 +16,12 @@ module.exports = {
   },
   // 添加我们的插件 会自动生成一个html文件
   plugins: [
-    new HtmlwebpackPlugin({
-      title: 'webpack'
-    })
-  ]
+    new HtmlwebpackPlugin({ title: 'webpack' })
+  ],
+  devServer: {
+    contentBase: "./src",//本地服务器所加载的页面所在的目录
+    historyApiFallback: true, //不跳转
+    inline: true, //实时刷新
+    hot: true // 自动刷新实时预览修改后的效果
+  }
 };
