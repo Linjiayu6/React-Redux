@@ -21,6 +21,14 @@ module.exports = {
         loaders: ['style-loader', 'css-loader'],
         include: ENTRY_PATH
       },
+      {
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
+        include: ENTRY_PATH,
+        query: {
+          presets: ['es2015']
+        }
+      },
     ]
   },
   // 添加我们的插件 会自动生成一个html文件

@@ -41,3 +41,7 @@ https://vikingmute.gitbooks.io/webpack-for-fools/content/entries/chapter-1.html
 
 #### 2.4 支持第三方库
 - `$ npm install moment --save-dev`
+
+#### 2.5 es6
+- `$ npm install babel-loader babel-preset-es2015 --save-dev`
+- 配置webpack.config.js loaders
