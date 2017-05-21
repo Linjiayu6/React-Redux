@@ -74,6 +74,6 @@ https://vikingmute.gitbooks.io/webpack-for-fools/content/entries/chapter-1.html
 - `$ npm install react-redux --save`
 在index这个文件
 
-### 4. Eslint, git-hook
+### 5. Eslint, git-hook
 - 增加.eslintrc.json和 .eslintignore文件
 - 安装pre-commit和pre-push对提交代码进行检测
