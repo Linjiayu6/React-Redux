@@ -6,9 +6,11 @@
   "scripts": {
     "start": "webpack-dev-server --progress --hot --inline --content-base",
     "build": "webpack --progress --profile --colors --config webpack.config.js",
-    "test": "eslint . --fix && echo 'Eslint Passed\\n'",
+    "test": "eslint . --fix && echo 'Please....Eslint Passed\\n'",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
-  "pre-commit": [ "test" ],
+  "pre-commit": [ "precommit-msg", "test" ],
+  "pre-push": [ "precommit-msg", "test" ],
   "keywords": [
     "webpack",
     "react",
