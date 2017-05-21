@@ -1,5 +1,5 @@
 # React_Redux_Webpack
-keywords: react, redux, webpack
+keywords: react, redux, webpack, eslint, git-hook
 
 ### 1. Init
 
