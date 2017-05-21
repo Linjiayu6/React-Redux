@@ -7,8 +7,8 @@
     "start": "webpack-dev-server --progress --hot --inline --content-base",
     "build": "webpack --progress --profile --colors --config webpack.config.js",
     "test": "eslint . --fix && echo 'Eslint Passed\\n'",
-    "precommit": "npm test && echo 'Eslint Before git commit'"
   },
+  "pre-commit": [ "test" ],
   "keywords": [
     "webpack",
     "react",
@@ -32,6 +32,7 @@
     "html-webpack-plugin": "^2.28.0",
     "husky": "^0.13.3",
     "moment": "^2.18.1",
+    "pre-commit": "^1.2.2",
     "pre-push": "^0.1.1",
     "style-loader": "^0.17.0",
     "url-loader": "^0.5.8",
