@@ -55,11 +55,11 @@ class Index extends Component {
   }
 }
 
-const { object, func } = PropTypes;
-Index.propTypes = {
-  poi: object,
-  onHandler: func,
-};
+// const { object, func } = PropTypes;
+// Index.propTypes = {
+//   poi: object,
+//   onHandler: func,
+// };
 const IndexComponent = connect(state => state, { onHandler })(Index);
 
 

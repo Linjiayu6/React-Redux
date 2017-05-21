@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --progress --hot --inline --content-base",
     "build": "webpack --progress --profile --colors --config webpack.config.js",
     "test": "eslint . --fix && echo 'Eslint Passed\\n'",
-    "precommit": "npm test"
+    "precommit": "npm test && echo 'Eslint Before git commit'"
   },
   "keywords": [
     "webpack",
