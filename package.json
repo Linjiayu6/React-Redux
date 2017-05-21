@@ -14,7 +14,9 @@
   "keywords": [
     "webpack",
     "react",
-    "redux"
+    "redux",
+    "eslint",
+    "git-hook"
   ],
   "author": "Lin.JY",
   "license": "ISC",
