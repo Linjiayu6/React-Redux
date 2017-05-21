@@ -21,12 +21,16 @@ app.appendChild(generateText());
 document.body.appendChild(app);
 */
 
+/* eslint no-shadow: 0, react/no-did-mount-set-state: 0, react/prop-types: 0, no-undef: 0 */
+
 import './style.css';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 
 import { Provider, connect } from 'react-redux';
 import { onHandler } from './redux/action';
+
+import { store } from './redux/store';
 
 class Index extends Component {
   constructor(...args) {
@@ -51,14 +55,19 @@ class Index extends Component {
   }
 }
 
+const { object, func } = PropTypes;
+Index.propTypes = {
+  poi: object,
+  onHandler: func,
+};
 const IndexComponent = connect(state => state, { onHandler })(Index);
 
-import { store } from './redux/store';
+
 const App = ({ store }) =>
-  <Provider store={store}>
+  (<Provider store={store}>
     <IndexComponent />
-  </Provider>;
+  </Provider>);
 
 const app = document.createElement('div');
 document.body.appendChild(app);
-ReactDOM.render(<App store={store}/>, app);
+ReactDOM.render(<App store={store} />, app);
