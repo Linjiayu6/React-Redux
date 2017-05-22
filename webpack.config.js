@@ -20,7 +20,6 @@ module.exports = {
       {
         test: /\.css$/,
         loaders: ['style-loader', 'css-loader?sourceMap'],
-        include: ENTRY_PATH,
       },
       {
         test: /\.jsx?$/,
