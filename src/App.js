@@ -4,10 +4,13 @@ import { Provider } from 'react-redux';
 import { store } from './framework/store';
 
 import Biztone from './biztone/Container';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const App = ({ store }) =>
   (<Provider store={store}>
-    <Biztone />
+    <Router>
+      <Route path="/biztone" component={Biztone} />
+    </Router>
   </Provider>);
 
 export default App;
