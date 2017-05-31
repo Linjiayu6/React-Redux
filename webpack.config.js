@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 
 // “__dirname”是node.js中的一个全局变量，它指向当前执行脚本所在的目录
@@ -13,6 +14,9 @@ module.exports = {
   output: {
     path: PUBLIC_PATH,
     filename: '[name].[hash].bundle.js',
+    // 这里没有加入publicPath, 指定文件引用的目录
+    // 如果咩有publicPath, react-router就会去找biztone/bundle.js 所以一直找不到
+    publicPath: '/',
   },
   devtool: 'eval-source-map',
   module: {
@@ -32,9 +36,11 @@ module.exports = {
       },
     ],
   },
-  // 添加我们的插件 会自动生成一个html文件
   plugins: [
-    new HtmlwebpackPlugin({ title: 'react' }),
+    new HtmlwebpackPlugin({
+      template: `${__dirname}/template.html`,
+    }),
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
   devServer: {
     contentBase: './src', // 本地服务器所加载的页面所在的目录
