@@ -11,9 +11,7 @@
   "keywords": [
     "webpack",
     "react",
-    "redux",
-    "eslint",
-    "git-hook"
+    "redux"
   ],
   "author": "Lin.JY",
   "license": "ISC",
@@ -33,14 +31,13 @@
     "html-webpack-plugin": "^2.28.0",
     "husky": "^0.13.3",
     "moment": "^2.18.1",
-    "pre-commit": "^1.2.2",
-    "pre-push": "^0.1.1",
     "style-loader": "^0.17.0",
     "url-loader": "^0.5.8",
     "webpack": "^2.5.0"
   },
   "dependencies": {
     "koa": "^2.2.0",
+    "pre-commit": "^1.2.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-hot-loader": "^3.0.0-beta.7",

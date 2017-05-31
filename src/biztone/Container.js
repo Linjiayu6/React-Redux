@@ -1,4 +1,4 @@
-/* eslint no-shadow: 0, react/no-did-mount-set-state: 0, react/prop-types: 0 */
+/* eslint no-shadow: 0, react/no-did-mount-set-state: 0, react/prop-types: 0, import/no-unresolved: 0 */
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { onHandler } from './action';
