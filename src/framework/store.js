@@ -2,8 +2,8 @@ import { compose, createStore, applyMiddleware, combineReducers } from 'redux';
 import { reducer, initialState } from '../biztone/reducer';
 
 const thunk = require('redux-thunk').default;
-// Add the reducer to your store on the `routing` key
 import { routerReducer } from 'react-router-redux';
+// routerReducer 将history和store绑定, 放到store里面
 const rootReducer = combineReducers({
   poi: reducer,
   routing: routerReducer,

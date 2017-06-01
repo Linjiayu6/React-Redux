@@ -3,16 +3,13 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from './framework/store';
 
-import Biztone from './biztone/Container';
-import Reserve from './reserve/index';
-
 import { Router, Route } from 'react-router';
+import routes from './routes';
 
 const App = ({ store, history }) => (
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={Reserve} />
-      <Route path="biztone" component={Biztone} />
+      {routes()}
     </Router>
   </Provider>
 );
