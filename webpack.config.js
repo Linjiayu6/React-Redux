@@ -9,7 +9,10 @@ const PUBLIC_PATH = path.resolve(ROOT_PATH, 'public');
 
 module.exports = {
   // /src 项目的文件夹 可以直接用文件夹名称 默认会找index.js 也可以确定是哪个文件名字
-  entry: ENTRY_PATH,
+  entry: [
+    'react-hot-loader/patch',
+    ENTRY_PATH,
+  ],
   // /public 输出的文件名 合并以后的js会命名为bundle.js
   output: {
     path: PUBLIC_PATH,
@@ -18,7 +21,7 @@ module.exports = {
     // 如果咩有publicPath, react-router就会去找biztone/bundle.js 所以一直找不到
     publicPath: '/',
   },
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   module: {
     loaders: [
       {
@@ -36,11 +39,13 @@ module.exports = {
       },
     ],
   },
+  // HMR: 需要加到webpack的配置 和 server端的配置
   plugins: [
     new HtmlwebpackPlugin({
       template: `${__dirname}/template.html`,
     }),
     new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
     contentBase: './src', // 本地服务器所加载的页面所在的目录

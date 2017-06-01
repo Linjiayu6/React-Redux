@@ -19,7 +19,7 @@ class Biztone extends Component {
     const { poiId, poiName } = this.props.poi;
     return (
       <div>
-        <div>Yes: {name}</div>
+        <div>name: {name}</div>
         <h3 className={style.poi}>poiId: {poiId}, poiName: {poiName}</h3>
         <button onClick={() => this.props.onHandler()}>Change</button>
       </div>
